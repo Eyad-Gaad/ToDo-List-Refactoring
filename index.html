@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo Refactoring</title>
+  <link rel="stylesheet" href="./style/all.min.css">
+  <link rel="stylesheet" href="./style/output.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div class="mt-6 flex flex-col items-center gap-y-10">
+    <div class="flex items-center gap-x-2 text-4xl font-bold">
+      <i class="fa-solid fa-clipboard-list"></i>
+      <h1>Todo List</h1>
+    </div>
+    <form id="form" class="w-full flex flex-col items-center gap-x-12 gap-y-5 sm:flex-row sm:justify-center">
+      <div class="flex flex-col w-[90%] min-h-8 sm:w-96 lg:w-2xl">
+        <input id="taskInput" type="text" placeholder="Add Task" class="w-full h-8 px-2 py-4 border-2 rounded-sm outline-0 focus:outline-1">
+        <div id="taskErrorValidationMessage" class="hidden p-4 text-sm text-red-800 rounded-lg bg-red-50">
+          <span class="font-medium">Task Validation !</span> Please enter a valid task (at least 3 characters and not empty).
+        </div>
+      </div>
+      <button type="submit" class="w-1/2 py-2 rounded-md font-semibold cursor-pointer duration-[0.2s] sm:w-30 lg:w-35 bg-blue-500 text-white hover:bg-blue-700">Add Task</button>
+    </form>
+    <div class="container mt-5 border-t-3 border-dotted"></div>
+  </div>
+  <div class="container mt-6 flex justify-end">
+    <div class="relative sm:w-xs h-8">
+      <input id="searchTaskWord" type="text" placeholder="search task..." class="w-full h-full px-6 border-2 rounded-sm outline-0 focus:outline-1">
+      <i class="fa-solid fa-magnifying-glass absolute top-2 start-1 text-[#424242]"></i>
+    </div>
+  </div>
+  <ul id="taskList" class="container mt-12 flex flex-col gap-y-8">
+  </ul>
+</body>
+</html>

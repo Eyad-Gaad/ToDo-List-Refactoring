@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer utilities{
+    .container{
+        @apply w-[90%] mx-auto
+    }
+}
